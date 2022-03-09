@@ -3,12 +3,14 @@ package org.acme;
 import io.smallrye.mutiny.Uni;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import java.util.List;
 
 @Path("/extensions")
 @RegisterRestClient(configKey = "extensions")
+@ApplicationScoped
 public interface ExtensionsService {
 
     @GET

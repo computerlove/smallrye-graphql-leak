@@ -2,9 +2,9 @@ package org.acme;
 
 import io.smallrye.mutiny.Uni;
 
-import javax.enterprise.context.Dependent;
+import javax.enterprise.context.ApplicationScoped;
 
-@Dependent
+@ApplicationScoped
 public class Repo {
     public Uni<B> getB() {
         return Uni.createFrom().item(new B(System.currentTimeMillis() + ""));
